@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+  .navbar-nav {
+    padding: 1.5rem 0;
+  }
+
+  .s-hero h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .s-hero p {
+    font-size: 1.4rem;
+    max-width: 12.5rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .s-anuncios {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .s-anuncios h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .s-anuncios h3 {
+    margin-top: 0.5rem;
+  }
+
+  footer {
+    height: auto;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  footer h3 {
+    margin: 1rem 0;
+  }
+}
