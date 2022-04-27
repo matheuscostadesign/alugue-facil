@@ -1,5 +1,12 @@
 <?php
 
-//host, usuário, senha, nome do banco
+$usuario = 'admin'; // Usuario banco
+$senha = 'admin'; // senha
+$database = 'dbaluguefacil';
+$host = 'localhost';
 
-$conn = mysqli_connect('localhost', 'admin', '123456', 'aluguefacil') or die('Erro ao conectar ao banco de dados');
+$mysqli = new mysqli($host, $usuario, $senha, $database);
+
+if ($mysqli->error) {
+  die("Falha ao conectar ao banco de dados: " . $mysqli->error);
+}
