@@ -1,12 +1,12 @@
 <?php
 
-$usuario = 'admin'; // Usuario banco
-$senha = 'admin'; // senha
+$usuario = 'admin';
+$senha = 'admin';
 $database = 'dbaluguefacil';
 $host = 'localhost';
 
-$mysqli = new mysqli($host, $usuario, $senha, $database);
+$conn = new mysqli($host, $usuario, $senha, $database);
 
-if ($mysqli->error) {
-  die("Falha ao conectar ao banco de dados: " . $mysqli->error);
+if ($conn->error) {
+  die("Falha ao conectar ao banco de dados: " . $conn->error);
 }
