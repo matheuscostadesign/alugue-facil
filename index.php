@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('Conexao.php');
 
 if (isset($_POST['email']) || isset($_POST['senha'])) {
 
@@ -62,7 +62,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     </p>
   </form>
 
-  <a href="cadastro.php">Cadastrar usuario</a>
+  <a href="usuarios/cadastrar.php">Cadastrar usuario</a>
 
 </body>
 
