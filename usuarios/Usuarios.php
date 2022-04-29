@@ -15,7 +15,7 @@ class Usuarios
 		$host = "localhost";
 		$usuario = "admin";
 		$senha = "admin";
-		$bd = "locauto";
+		$bd = "dbaluguefacil"; // nome do banco
 		$this->con = mysqli_connect($host, $usuario, $senha, $bd);
 		return $this->con;
 	}
