@@ -19,13 +19,6 @@ include('protect.php');
 
   <?php include 'componentes/header.php'; ?>
 
-  Bem vindo ao Painel, <?php echo $_SESSION['nome']; ?>.
-
-  <p>
-    <a href="logout.php">Sair</a>
-  </p>
-
-
   <section class="s-hero">
     <div class="container">
       <h1>Alugue qualquer coisa, sem burocracias e diretamente com o proprietário</h1>

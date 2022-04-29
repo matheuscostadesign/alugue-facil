@@ -76,7 +76,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                 </a>
                 <h3 class="login-heading mb-4">Acesso a plataforma</h3>
                 <form action="" method="post" class="text-left">
-                  <input placeholder="Email" type="email" name="email" maxlength="45" class="form-control" required><br>
+                  <input placeholder="Email" type="text" name="email" maxlength="45" class="form-control" required><br>
                   <input placeholder="Senha" type="password" name="senha" maxlength="45" class="form-control" required><br>
                   <button class="btn btn-success btn-default" type="submit">Acessar agora!</button>
                   <a href="usuarios/cadastrar.php">Não tem cadastro?</a>
