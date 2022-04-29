@@ -32,11 +32,12 @@
                 <a href="index.html">
                   <img src="/imgs/logo.svg" alt="Logo Alugue Fácil" width="400">
                 </a>
-                <h3 class="login-heading mb-4">Cadastrar novo usuário</h3>
-                <form action="cadastro-ok.html" method="post" class="text-left">
-                  <input placeholder="Nome" type="text" name="nm" required maxlength=45 class="form-control"><br>
-                  <input placeholder="Email" type="email" name="em" required maxlength=45 class="form-control"><br>
-                  <input placeholder="Senha" type="password" name="sen" required maxlength=45 class="form-control"><br>
+                <h3 class="login-heading">Cadastrar novo usuário</h3>
+                <form action="cadastro-ok.php" method="post" class="text-left">
+                  <input placeholder="ID" type="text" name="id" size="30" maxlength="30" placeholder="ID" hidden> <br><br>
+                  <input placeholder="Nome" type="text" name="nome" maxlength="45" class="form-control" required><br>
+                  <input placeholder="Email" type="text" name="email" maxlength="45" class="form-control" required><br>
+                  <input placeholder="Senha" type="password" name="senha" maxlength="45" class="form-control" required><br>
                   <button class="btn btn-success btn-default" type="submit">Cadastrar agora!</button>
                   <span><a href="../index.php">Já tem usuário?</a></span>
                 </form>
