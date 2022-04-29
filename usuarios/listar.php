@@ -1,8 +1,8 @@
 <?php
-include("Condutores.php");
-$cond = new Condutores;
-$con = $cond->ConectaBD();
-$consulta = "select * from condutores";
+include("Usuarios.php");
+$usuarios = new Usuarios;
+$con = $usuarios->ConectaBD();
+$consulta = "select * from usuarios";
 $conx = mysqli_query($con, $consulta);
 ?>
 
@@ -15,31 +15,37 @@ $conx = mysqli_query($con, $consulta);
 </head>
 
 <body>
-  <div>Sistema de Locação de Automóveis</div>
-  <div>Manutenção Cadastro de Condutores</div>
+  <div>Listagem de usuários</div>
+
   <div>
     <form name="condutores" action="cadastrar.php" method="post">
       <input type="submit" name="butinc" value="Inclusão">
     </form>
   </div>
+
   <table>
     <tr>
-      <th>CNH</th>
+      <th>ID</th>
       <th>Nome</th>
-      <th>Nascimento</th>
-      <th>Ação</th>
+      <th>E-mail</th>
+      <th>Senha</th>
     </tr>
     <?php while ($dado = mysqli_fetch_assoc($conx)) { ?>
       <tr>
-        <td><?php echo $dado['cnh']; ?></td>
+        <td><?php echo $dado['id']; ?></td>
         <td><?php echo $dado['nome']; ?></td>
-        <td><?php echo date('d/m/Y', strtotime($dado['nasc'])); ?></td>
+        <td><?php echo $dado['email']; ?></td>
+        <td><?php echo $dado['senha']; ?></td>
+        <!-- <td><//?php echo date('d/m/Y', strtotime($dado['nasc'])); ?></td> -->
+
         <td>
-          <a href="editar.php?codigo=<?php echo $dado['cnh']; ?>">Editar</a>
-          <a href="deletar.php?codigo=<?php echo $dado['cnh']; ?>" onclick="return confirm('Confirma Exclusão ???')">Excluir</a>
+          <a href="editar.php?codigo=<?php echo $dado['id']; ?>">Editar</a>
+          <a href="deletar.php?codigo=<?php echo $dado['id']; ?>" onclick="return confirm('Confirma Exclusão ???')">Excluir</a>
         </td>
+
       </tr>
     <?php } ?>
+
   </table>
 
 </body>

@@ -1,11 +1,15 @@
 <?php
-include("Condutores.php");
-$cond = new Condutores;
-$cond->setCnh($_REQUEST["cnh"]);
-$cond->setNome($_REQUEST["nome"]);
-$cond->setNasc($_REQUEST["nasc"]);
+include("Usuarios.php");
+$usuarios = new Usuarios;
+
+$usuarios->setId($_REQUEST["id"]);
+$usuarios->setNome($_REQUEST["nome"]);
+$usuarios->setEmail($_REQUEST["email"]);
+$usuarios->setSenha($_REQUEST["senha"]);
+
 $cond->ConectaBD();
 $cond->Alterar();
+
 ?>
 
 <html>
@@ -15,24 +19,26 @@ $cond->Alterar();
   <head>
     <link rel="stylesheet" href="estilos.css">
   </head>
-  <div>Cadastro de Condutores - Alteração</div>
+  <div>Cadastro de Usuarios - Edição</div>
   <table>
     <tr>
-      <th>CNH</th>
+      <th>ID</th>
       <th>Nome</th>
-      <th>Data Nascimento</th>
+      <th>E-mail</th>
+      <th>Senha</th>
     </tr>
     <tr>
-      <td><?php echo ($cond->getCnh()) ?></td>
+      <td><?php echo ($cond->getId()) ?></td>
       <td><?php echo ($cond->getNome()) ?></td>
-      <td><?php echo ($cond->getNasc()) ?></td>
+      <td><?php echo ($cond->getEmail()) ?></td>
+      <td><?php echo ($cond->getSenha()) ?></td>
     </tr>
   </table>
   <p>
-  <div>Condutor alterado com sucesso !!!</div>
-  <p></p>
-  <a href="../index.html">Voltar</a>
-  </font>
+
+  <div>Usuario alterado com sucesso !!!</div>
+
+
 </body>
 
 </html>
