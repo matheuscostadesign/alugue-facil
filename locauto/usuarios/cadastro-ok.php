@@ -2,6 +2,7 @@
 include("Usuarios.php");
 $usuarios = new Usuarios;
 
+$usuarios->setId($_REQUEST["id"]);
 $usuarios->setNome($_REQUEST["nome"]);
 $usuarios->setEmail($_REQUEST["email"]);
 $usuarios->setSenha($_REQUEST["senha"]);
@@ -20,11 +21,13 @@ $usuarios->Incluir();
   <div>Cadastro de Usuarios</div>
   <table>
     <tr>
+      <th>ID</th>
       <th>Nome</th>
       <th>E-mail</th>
       <th>Senha</th>
     </tr>
     <tr>
+      <td><?php echo ($usuarios->getId()) ?></td>
       <td><?php echo ($usuarios->getNome()) ?></td>
       <td><?php echo ($usuarios->getEmail()) ?></td>
       <td><?php echo ($usuarios->getSenha()) ?></td>

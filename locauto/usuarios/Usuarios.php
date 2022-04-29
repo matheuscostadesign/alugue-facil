@@ -2,7 +2,7 @@
 
 class Usuarios
 {
-
+	private $id;
 	private $nome;
 	private $email;
 	private $senha;
@@ -25,6 +25,7 @@ class Usuarios
 	public function Incluir()
 	{
 		$query = "insert into usuarios values(
+		'$this->id',
 		'$this->nome', 
 		'$this->email',
 		'$this->senha')";
@@ -35,29 +36,40 @@ class Usuarios
 	}
 
 	// método alteração
-	// public function Alterar()
-	// {
-	// 	$query = "update usuarios set 
-	// 	nome = '$this->nome', 
-	// 	nasc = '$this->nasc' where 
-	// 	cnh = '$this->cnh'";
-	// 	// execução da instrução SQL
-	// 	mysqli_query($this->con, $query);
-	// 	// fechamento do BD
-	// 	mysqli_close($this->con);
-	// }
+	public function Alterar()
+	{
+		$query = "update usuarios set 
+		id = '$this->id', 
+		nome = '$this->nome', 
+		email = '$this->email' where 
+		senha = '$this->senha'";
+		// execução da instrução SQL
+		mysqli_query($this->con, $query);
+		// fechamento do BD
+		mysqli_close($this->con);
+	}
 
 	// método exclusão
-	// public function Excluir()
-	// {
-	// 	$query = "delete from usuarios where cnh = '$this->cnh'";
-	// 	// execução da instrução SQL
-	// 	mysqli_query($this->con, $query);
-	// 	// fechamento do BD
-	// 	mysqli_close($this->con);
-	// }
+	public function Excluir()
+	{
+		$query = "delete from usuarios where id = '$this->id'";
+		// execução da instrução SQL
+		mysqli_query($this->con, $query);
+		// fechamento do BD
+		mysqli_close($this->con);
+	}
 
 	// ---- getters e setters --------
+
+	// ID
+	public function getId()
+	{
+		return $this->id;
+	}
+	public function setId($id)
+	{
+		$this->id = $id;
+	}
 
 	// Nome
 	public function getNome()

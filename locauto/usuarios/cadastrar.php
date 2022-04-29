@@ -13,6 +13,11 @@
       </tr>
 
       <tr>
+        <td>ID</td>
+        <td><input type="text" name="id" size="30" maxlength="30" required></td>
+      </tr>
+
+      <tr>
         <td>Nome</td>
         <td><input type="text" name="nome" size="30" maxlength="30" required></td>
       </tr>

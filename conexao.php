@@ -2,7 +2,7 @@
 
 $usuario = 'admin';
 $senha = 'admin';
-$database = 'dbaluguefacil';
+$database = 'locauto';
 $host = 'localhost';
 
 $conn = new mysqli($host, $usuario, $senha, $database);
