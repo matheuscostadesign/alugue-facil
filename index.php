@@ -46,7 +46,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <?php include 'componentes/head-styles.php'; ?>
 
   <title>Login</title>
 </head>
@@ -71,6 +71,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
   <?php include 'componentes/footer.php'; ?>
 
+  <?php include 'componentes/body-scripts.php'; ?>
 
 </body>
 
