@@ -4,7 +4,8 @@ include('Conexao.php');
 if (isset($_POST['email']) || isset($_POST['senha'])) {
 
   if (strlen($_POST['email']) == 0) {
-    echo "Preencha seu e-mail";
+    //echo "Preencha seu e-mail";
+    echo "<div class='alert alert-danger' role='alert'>Preencha seu e-mail!</div> ";
   } else if (strlen($_POST['senha']) == 0) {
     echo "Preencha sua senha";
   } else {
@@ -30,7 +31,8 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
       header("Location: painel.php");
     } else {
-      echo "Falha ao logar! E-mail ou senha incorretos";
+      //echo "Falha ao logar! E-mail ou senha incorretos";
+      echo "<div class='alert alert-danger' role='alert'>Erro ao inserir registro!</div> ";
     }
   }
 }
@@ -43,6 +45,9 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
   <title>Login</title>
 </head>
 
@@ -62,7 +67,10 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
     </p>
   </form>
 
-  <a href="usuarios/cadastrar.php">Cadastrar usuario</a>
+  <a href="usuarios/cadastrar.php">Cadastrar usuario</a> <br><br>
+
+  <?php include 'componentes/footer.php'; ?>
+
 
 </body>
 
