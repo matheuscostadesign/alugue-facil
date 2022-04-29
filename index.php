@@ -36,7 +36,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
 <head>
   <!-- Styles -->
-  <?php include 'componentes/head-styles.php'; ?>
+  <?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/head-styles.php'); ?>
 
   <!-- Primary Meta Tags -->
   <title>Login - Alugue Fácil</title>
@@ -90,10 +90,10 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
   </div>
 
   <!-- Footer -->
-  <!-- <//?php include 'componentes/footer.php'; ?> -->
+  <!-- <//?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/footer.php'); ?> -->
 
   <!-- Scripts -->
-  <?php include 'componentes/body-scripts.php'; ?>
+  <?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/body-scripts.php'); ?>
 
 </body>
 
