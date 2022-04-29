@@ -1,15 +1,12 @@
 <?php
 include("Usuarios.php");
 $usuarios = new Usuarios;
-
 $usuarios->setId($_REQUEST["id"]);
 $usuarios->setNome($_REQUEST["nome"]);
 $usuarios->setEmail($_REQUEST["email"]);
 $usuarios->setSenha($_REQUEST["senha"]);
-
 $usuarios->ConectaBD();
 $usuarios->Alterar();
-
 ?>
 
 <html>

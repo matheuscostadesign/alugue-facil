@@ -9,10 +9,9 @@ class Usuarios
 
 	public $con; // variável para conexão com BD
 
-	// método conecta BD
+	// Conexão BD
 	public function ConectaBD()
 	{
-		// conexão com a base de dados MySql 
 		$host = "localhost";
 		$usuario = "admin";
 		$senha = "admin";
@@ -21,7 +20,7 @@ class Usuarios
 		return $this->con;
 	}
 
-	// método inclusão
+	// Método Inclusão
 	public function Incluir()
 	{
 		$query = "insert into usuarios values(
@@ -29,27 +28,11 @@ class Usuarios
 		'$this->nome', 
 		'$this->email',
 		'$this->senha')";
-		// execução da instrução SQL
-		mysqli_query($this->con, $query);
-		// fechamento do BD
-		mysqli_close($this->con);
+		mysqli_query($this->con, $query); // execução da instrução SQL
+		mysqli_close($this->con); // fechamento do BD
 	}
 
-	// método alteração
-	// public function Alterar()
-	// {
-	// 	$query = "update usuarios set 
-	// 	id = '$this->id', 
-	// 	nome = '$this->nome', 
-	// 	email = '$this->email' where 
-	// 	senha = '$this->senha'";
-	// 	// execução da instrução SQL
-	// 	mysqli_query($this->con, $query);
-	// 	// fechamento do BD
-	// 	mysqli_close($this->con);
-	// }
-
-	// método alteração
+	// Método Alteração
 	public function Alterar()
 	{
 		$query = "update usuarios set 
@@ -57,23 +40,19 @@ class Usuarios
 		email = '$this->email',
 		senha = '$this->senha'
 		where id = '$this->id'";
-		// execução da instrução SQL
 		mysqli_query($this->con, $query);
-		// fechamento do BD
 		mysqli_close($this->con);
 	}
 
-	// método exclusão
+	// Método Exclusão
 	public function Excluir()
 	{
 		$query = "delete from usuarios where id = '$this->id'";
-		// execução da instrução SQL
 		mysqli_query($this->con, $query);
-		// fechamento do BD
 		mysqli_close($this->con);
 	}
 
-	// ---- getters e setters --------
+	// Getters e Setters
 
 	// ID
 	public function getId()

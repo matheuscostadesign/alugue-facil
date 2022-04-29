@@ -1,12 +1,10 @@
 <?php
 include("Usuarios.php");
 $usuarios = new Usuarios;
-
 $usuarios->setId($_REQUEST["id"]);
 $usuarios->setNome($_REQUEST["nome"]);
 $usuarios->setEmail($_REQUEST["email"]);
 $usuarios->setSenha($_REQUEST["senha"]);
-
 $usuarios->ConectaBD();
 $usuarios->Incluir();
 ?>
@@ -39,7 +37,7 @@ $usuarios->Incluir();
 
   <p></p>
 
-  <a href="../index.html">Voltar</a>
+  <a href="../index.php">Voltar</a>
 
 </body>
 

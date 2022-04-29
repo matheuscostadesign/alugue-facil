@@ -1,11 +1,8 @@
 <?php
 include("Usuarios.php");
 $usuarios = new Usuarios;
-
 $con = $usuarios->ConectaBD();
-
-$codigo = $_REQUEST["codigo"];
-
+$codigo = $_REQUEST["codigo"]; // Codigo para edicao
 $consulta = "select * from usuarios where id = " . $codigo;
 $conx = mysqli_query($con, $consulta);
 $dado = mysqli_fetch_assoc($conx);
