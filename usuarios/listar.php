@@ -17,11 +17,6 @@ $conx = mysqli_query($con, $consulta);
 <body>
   <div>Listagem de usuários</div>
 
-  <div>
-    <form name="condutores" action="cadastrar.php" method="post">
-      <input type="submit" name="butinc" value="Inclusão">
-    </form>
-  </div>
 
   <table>
     <tr>
@@ -40,9 +35,8 @@ $conx = mysqli_query($con, $consulta);
 
         <td>
           <a href="editar.php?codigo=<?php echo $dado['id']; ?>">Editar</a>
-          <a href="deletar.php?codigo=<?php echo $dado['id']; ?>" onclick="return confirm('Confirma Exclusão ???')">Excluir</a>
+          <a href="deletar.php?codigo=<?php echo $dado['id']; ?>" onclick="return confirm('Confirma exclusão?')">Excluir</a>
         </td>
-
       </tr>
     <?php } ?>
 

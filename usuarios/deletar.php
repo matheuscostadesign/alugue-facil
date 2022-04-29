@@ -1,9 +1,10 @@
 <?php
-include("Condutores.php");
-$cond = new Condutores;
-$con = $cond->ConectaBD();
-$cond->setCnh($_REQUEST["codigo"]);
-$cond->Excluir();
+include("Usuarios.php");
+$usuarios = new Usuarios;
+$con = $usuarios->ConectaBD();
+
+$usuarios->setId($_REQUEST["codigo"]);
+$usuarios->Excluir();
 ?>
 
 <html>
@@ -14,12 +15,13 @@ $cond->Excluir();
 </head>
 
 <body>
-    <div>Cadastro de Condutores - Exclusão</div>
+    <div>Cadastro de Usuarios - Exclusão</div>
     <br><br>
-    <div>Condutor <?php echo $cond->getCnh(); ?> excluído</div>
+    <div>Usuario <?php echo $usuarios->getNome(); ?> excluído com sucesso</div>
     <br><br>
 
     <a href="../index.html">Voltar</a>
+
 </body>
 
 </html>

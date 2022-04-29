@@ -7,8 +7,8 @@ $usuarios->setNome($_REQUEST["nome"]);
 $usuarios->setEmail($_REQUEST["email"]);
 $usuarios->setSenha($_REQUEST["senha"]);
 
-$cond->ConectaBD();
-$cond->Alterar();
+$usuarios->ConectaBD();
+$usuarios->Alterar();
 
 ?>
 
@@ -28,10 +28,10 @@ $cond->Alterar();
       <th>Senha</th>
     </tr>
     <tr>
-      <td><?php echo ($cond->getId()) ?></td>
-      <td><?php echo ($cond->getNome()) ?></td>
-      <td><?php echo ($cond->getEmail()) ?></td>
-      <td><?php echo ($cond->getSenha()) ?></td>
+      <td><?php echo ($usuarios->getId()) ?></td>
+      <td><?php echo ($usuarios->getNome()) ?></td>
+      <td><?php echo ($usuarios->getEmail()) ?></td>
+      <td><?php echo ($usuarios->getSenha()) ?></td>
     </tr>
   </table>
   <p>

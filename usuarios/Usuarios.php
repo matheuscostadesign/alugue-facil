@@ -36,13 +36,27 @@ class Usuarios
 	}
 
 	// método alteração
+	// public function Alterar()
+	// {
+	// 	$query = "update usuarios set 
+	// 	id = '$this->id', 
+	// 	nome = '$this->nome', 
+	// 	email = '$this->email' where 
+	// 	senha = '$this->senha'";
+	// 	// execução da instrução SQL
+	// 	mysqli_query($this->con, $query);
+	// 	// fechamento do BD
+	// 	mysqli_close($this->con);
+	// }
+
+	// método alteração
 	public function Alterar()
 	{
 		$query = "update usuarios set 
-		id = '$this->id', 
 		nome = '$this->nome', 
-		email = '$this->email' where 
-		senha = '$this->senha'";
+		email = '$this->email',
+		senha = '$this->senha'
+		where id = '$this->id'";
 		// execução da instrução SQL
 		mysqli_query($this->con, $query);
 		// fechamento do BD

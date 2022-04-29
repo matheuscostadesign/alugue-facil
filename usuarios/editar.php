@@ -4,9 +4,9 @@ $usuarios = new Usuarios;
 
 $con = $usuarios->ConectaBD();
 
-$id = $_REQUEST["id"];
+$codigo = $_REQUEST["codigo"];
 
-$consulta = "select * from usuarios where id = " . $id;
+$consulta = "select * from usuarios where id = " . $codigo;
 $conx = mysqli_query($con, $consulta);
 $dado = mysqli_fetch_assoc($conx);
 ?>
@@ -26,7 +26,7 @@ $dado = mysqli_fetch_assoc($conx);
             </tr>
             <tr>
                 <td>ID</td>
-                <td><input type="text" name="id" size="15" maxlength="15" readonly value=<?php echo $id; ?>></td>
+                <td><input type="text" name="id" size="15" maxlength="15" readonly value=<?php echo $codigo; ?>></td>
             </tr>
             <tr>
                 <td>Nome</td>
