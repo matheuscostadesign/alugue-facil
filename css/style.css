@@ -16,6 +16,10 @@
   --white: #fff;
 }
 
+.green {
+  color: var(--color-primary);
+}
+
 /* Padroes */
 
 h1 {
@@ -176,8 +180,6 @@ nav ul li {
   object-fit: cover;
   border-radius: 8px;
 }
-
-
 
 /* Footer */
 
