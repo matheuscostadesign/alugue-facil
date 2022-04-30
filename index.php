@@ -71,7 +71,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
           <div class="container">
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
-                <a href="index.html">
+                <a href="#">
                   <img src="imgs/logo.svg" alt="Logo Alugue Fácil" width="400">
                 </a>
                 <h3 class="login-heading mb-4">Acesso a plataforma</h3>
