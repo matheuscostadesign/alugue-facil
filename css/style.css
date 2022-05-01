@@ -11,6 +11,8 @@
 
 :root {
   --color-primary: #00ab44;
+  --color-primary-light: #4aff93;
+  --color-primary-dark: #007730;
   --gray-color-50: #929292;
   --gray-color-100: #212121;
   --white: #fff;
@@ -56,7 +58,7 @@ img {
 
 ::selection {
   color: var(--white);
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
 }
 
 /* Barra de navegação */
@@ -71,7 +73,7 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
 }
 
 /* ---- Login --- */

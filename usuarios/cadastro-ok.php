@@ -32,7 +32,7 @@ $usuarios->Incluir();
           </div>
           <div class="card-body p-4 p-sm-5">
             <div class="logo text-center mb-2">
-              <a href="#">
+              <a href="../index.php">
                 <img src="/imgs/logo.svg" alt="Logo Alugue Fácil" width="300">
               </a>
             </div>

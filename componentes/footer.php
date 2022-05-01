@@ -1,11 +1,13 @@
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="logo-footer">
-          <a href="#"><img src="/imgs/logo-footer.svg" alt="Alugue Fácil"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+ <!-- Footer-->
+ <footer class="bg-dark py-4 mt-auto">
+   <div class="container px-5">
+     <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+       <div class="col-auto">
+         <div class="small m-0 text-white">Copyright &copy; 2022 | Alugue Fácil</div>
+       </div>
+       <div class="col-auto">
+         <a class="link-light small" href="/contato.php">Contato</a>
+       </div>
+     </div>
+   </div>
+ </footer>
