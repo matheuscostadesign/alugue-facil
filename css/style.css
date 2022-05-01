@@ -20,26 +20,30 @@
   color: var(--color-primary);
 }
 
+.bg-green {
+  background-color: var(--color-primary);
+}
+
 /* Padroes */
 
-h1 {
+/* h1 {
   font-weight: 600;
   font-size: 58px;
   line-height: 60px;
   letter-spacing: -0.022em;
-}
+} */
 
-h2 {
+/* h2 {
   font-size: 36px;
   line-height: 16px;
   letter-spacing: -0.022em;
   color: var(--gray-color-50);
-}
+} */
 
-h3 {
+/* h3 {
   font-size: 24px;
   line-height: 41px;
-}
+} */
 
 /* ---- Imagens ---- */
 
@@ -72,16 +76,10 @@ body::-webkit-scrollbar-thumb {
 
 /* ---- Login --- */
 
-.login {
-  min-height: 100vh;
-}
-
-.bg-image {
-  background-color: var(--color-primary);
-}
-
-.login-heading {
-  font-weight: 300;
+.card-img-left {
+  width: 45%;
+  background: scroll center url("https://source.unsplash.com/WEQbe2jBg40/414x512");
+  background-size: cover;
 }
 
 .btn-login {

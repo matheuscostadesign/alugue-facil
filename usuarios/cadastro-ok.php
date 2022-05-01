@@ -22,27 +22,25 @@ $usuarios->Incluir();
   <meta name="description" content="Alugue qualquer coisa, sem burocracias e diretamente com o proprietário">
 </head>
 
-<body>
+<body class="bg-green">
 
-  <div class="container-fluid ps-md-0">
-    <div class="row g-0">
-      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-      <div class="col-md-8 col-lg-6">
-        <div class="login d-flex align-items-center py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-9 col-lg-8 mx-auto">
-                <a href="#">
-                  <img src="/imgs/logo.svg" alt="Logo Alugue Fácil" width="400">
-                </a>
-                <h3 class="login-heading green">Usuário criado com sucesso!</h3>
-                <p>Dados de acesso:</p>
-                <p><strong>Nome: </strong> <?php echo ($usuarios->getNome()) ?></p>
-                <p><strong>Usuário: </strong><?php echo ($usuarios->getEmail()) ?></p>
-                <p><strong>Senha: </strong><?php echo ($usuarios->getSenha()) ?></p>
-                <a href="/index.php" class="btn btn-primary">Faça o login para acessar a plataforma</a>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-img-left d-none d-md-flex bg-green">
+          </div>
+          <div class="card-body p-4 p-sm-5">
+            <div class="logo text-center mb-2">
+              <a href="#">
+                <img src="/imgs/logo.svg" alt="Logo Alugue Fácil" width="300">
+              </a>
             </div>
+            <h5 class="card-title text-center mb-3 fw-light fs-5 green">Usuário criado com sucesso!</h5>
+            <p><strong>Nome: </strong> <?php echo ($usuarios->getNome()) ?></p>
+            <p><strong>Usuário: </strong><?php echo ($usuarios->getEmail()) ?></p>
+            <p><strong>Senha: </strong><?php echo ($usuarios->getSenha()) ?></p>
+            <a href="/login.php" class="btn btn-success btn-default">Fazer login na plataforma</a>
           </div>
         </div>
       </div>

@@ -1,100 +1,191 @@
-<?php
-include('Conexao.php');
-
-if (isset($_POST['email']) || isset($_POST['senha'])) {
-  if (strlen($_POST['email']) == 0) {
-    //echo "Preencha seu e-mail";
-    echo "<div class='alert alert-danger' role='alert'>Preencha seu e-mail!</div> ";
-  } else if (strlen($_POST['senha']) == 0) {
-    //echo "Preencha sua senha";
-    echo "<div class='alert alert-danger' role='alert'>Preencha sua senha!</div> ";
-  } else {
-    $email = $conn->real_escape_string($_POST['email']);
-    $senha = $conn->real_escape_string($_POST['senha']);
-    $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
-    $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
-    $quantidade = $sql_query->num_rows;
-
-    if ($quantidade == 1) {
-      $usuario = $sql_query->fetch_assoc();
-      if (!isset($_SESSION)) {
-        session_start();
-      }
-      $_SESSION['id'] = $usuario['id'];
-      $_SESSION['nome'] = $usuario['nome'];
-      header("Location: painel.php");
-    } else {
-      //echo "Falha ao logar! E-mail ou senha incorretos";
-      echo "<div class='alert alert-danger' role='alert'>Falha ao logar! E-mail ou senha incorretos!</div> ";
-    }
-  }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <!-- Styles -->
-  <?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/head-styles.php'); ?>
-
-  <!-- Primary Meta Tags -->
-  <title>Login - Alugue Fácil</title>
-  <meta name="title" content="Alugue Fácil - Alugue qualquer coisa sem burocracias">
-  <meta name="description" content="Alugue qualquer coisa, sem burocracias e diretamente com o proprietário">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Modern Business - Start Bootstrap Template</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/theme.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
+  <main class="flex-shrink-0">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container px-5">
+        <a class="navbar-brand" href="index.php">
+          <img src="imgs/logo.svg" alt="Logo Alugue Fácil" width="180">
+        </a>
+        <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link text-dark" href="/login.php">Login</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" class="btn btn-primary" href="/usuarios/cadastrar.php">Cadastro</a></li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
+                <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
+              </ul>
+            </li> -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
+                <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-green py-5">
+      <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+          <div class="col-lg-8 col-xl-7 col-xxl-6">
+            <div class="my-5 text-center text-xl-start">
+              <h1 class="display-5 fw-bolder text-white mb-2">Alugue qualquer coisa sem burocracias!</h1>
+              <p class="lead fw-normal text-white mb-4">Encontre gratuitamente
+                qualquer tipo de produto ou serviço para alugar diretamente com o proprietário</p>
+              <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                <a class="btn btn-success btn-lg px-4 me-sm-3" href="/usuarios/cadastrar.php">Começar</a>
+                <a class="btn btn-outline-light btn-lg px-4" href="/login.php">Fazer Login</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+        </div>
+      </div>
+    </header>
 
-  <!-- <h1>Acesse sua conta</h1>
-  <form action="" method="POST">
-    <p>
-      <label>E-mail</label>
-      <input type="text" name="email">
-    </p>
-    <p>
-      <label>Senha</label>
-      <input type="password" name="senha">
-    </p>
-    <p>
-      <button type="submit">Entrar</button>
-    </p>
-  </form>
-
-  <a href="usuarios/cadastrar.php">Cadastrar usuario</a> <br><br> -->
-
-  <div class="container-fluid ps-md-0">
-    <div class="row g-0">
-      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-      <div class="col-md-8 col-lg-6">
-        <div class="login d-flex align-items-center py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-9 col-lg-8 mx-auto">
-                <a href="#">
-                  <img src="imgs/logo.svg" alt="Logo Alugue Fácil" width="400">
+    <!-- Blog preview section-->
+    <section class="py-5">
+      <div class="container px-5 my-5">
+        <div class="row gx-5 justify-content-center">
+          <div class="col-lg-8 col-xl-6">
+            <div class="text-center">
+              <h2 class="fw-bolder">From our blog</h2>
+              <p class="lead fw-normal text-muted mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugit ratione dicta mollitia. Officiis ad.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row gx-5">
+          <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+              <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
+              <div class="card-body p-4">
+                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                <a class="text-decoration-none link-dark stretched-link" href="#!">
+                  <h5 class="card-title mb-3">Blog post title</h5>
                 </a>
-                <h3 class="login-heading mb-4">Acesso a plataforma</h3>
-                <form action="" method="post" class="text-left">
-                  <input placeholder="Email" type="text" name="email" maxlength="45" class="form-control" required><br>
-                  <input placeholder="Senha" type="password" name="senha" maxlength="45" class="form-control" required><br>
-                  <button class="btn btn-success btn-default" type="submit">Acessar agora!</button>
-                  <a href="usuarios/cadastrar.php">Não tem cadastro?</a>
-                </form>
+                <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                <div class="d-flex align-items-end justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                    <div class="small">
+                      <div class="fw-bold">Kelly Rowan</div>
+                      <div class="text-muted">March 12, 2022 &middot; 6 min read</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+              <img class="card-img-top" src="https://dummyimage.com/600x350/adb5bd/495057" alt="..." />
+              <div class="card-body p-4">
+                <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
+                <a class="text-decoration-none link-dark stretched-link" href="#!">
+                  <h5 class="card-title mb-3">Another blog post title</h5>
+                </a>
+                <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                <div class="d-flex align-items-end justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                    <div class="small">
+                      <div class="fw-bold">Josiah Barclay</div>
+                      <div class="text-muted">March 23, 2022 &middot; 4 min read</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+              <img class="card-img-top" src="https://dummyimage.com/600x350/6c757d/343a40" alt="..." />
+              <div class="card-body p-4">
+                <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                <a class="text-decoration-none link-dark stretched-link" href="#!">
+                  <h5 class="card-title mb-3">The last blog post title is a little bit longer than the others</h5>
+                </a>
+                <p class="card-text mb-0">Some more quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                <div class="d-flex align-items-end justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                    <div class="small">
+                      <div class="fw-bold">Evelyn Martinez</div>
+                      <div class="text-muted">April 2, 2022 &middot; 10 min read</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- Call to action-->
+        <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+          <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+            <div class="mb-4 mb-xl-0">
+              <div class="fs-3 fw-bold text-white">New products, delivered to you.</div>
+              <div class="text-white-50">Sign up for our newsletter for the latest updates.</div>
+            </div>
+            <div class="ms-xl-4">
+              <div class="input-group mb-2">
+                <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
+                <button class="btn btn-outline-light" id="button-newsletter" type="button">Sign up</button>
+              </div>
+              <div class="small text-white-50">We care about privacy, and will never share your data.</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer-->
+  <footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+      <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+        <div class="col-auto">
+          <div class="small m-0 text-white">Copyright &copy; 2022 | Alugue Fácil</div>
+        </div>
+        <div class="col-auto">
+          <a class="link-light small" href="#!">Privacy</a>
+          <span class="text-white mx-1">&middot;</span>
+          <a class="link-light small" href="#!">Terms</a>
+          <span class="text-white mx-1">&middot;</span>
+          <a class="link-light small" href="#!">Contact</a>
+        </div>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- Footer -->
-  <!-- <//?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/footer.php'); ?> -->
-
-  <!-- Scripts -->
-  <?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/body-scripts.php'); ?>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

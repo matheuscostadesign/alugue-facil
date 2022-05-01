@@ -11,30 +11,40 @@
   <meta name="description" content="Alugue qualquer coisa, sem burocracias e diretamente com o proprietário">
 </head>
 
-<body>
+<body class="bg-green">
 
-  <div class="container-fluid ps-md-0">
-    <div class="row g-0">
-      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-      <div class="col-md-8 col-lg-6">
-        <div class="login d-flex align-items-center py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-9 col-lg-8 mx-auto">
-                <a href="#">
-                  <img src="/imgs/logo.svg" alt="Logo Alugue Fácil" width="400">
-                </a>
-                <h3 class="login-heading">Cadastrar novo usuário</h3>
-                <form action="cadastro-ok.php" method="post" class="text-left">
-                  <input placeholder="ID" type="text" name="id" size="30" maxlength="30" placeholder="ID" hidden><br>
-                  <input placeholder="Nome" type="text" name="nome" maxlength="45" class="form-control" required><br>
-                  <input placeholder="Email" type="text" name="email" maxlength="45" class="form-control" required><br>
-                  <input placeholder="Senha" type="password" name="senha" maxlength="45" class="form-control" required><br>
-                  <button class="btn btn-success btn-default" type="submit">Cadastrar agora!</button>
-                  <span><a href="../index.php">Já tem usuário?</a></span>
-                </form>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-img-left d-none d-md-flex bg-green">
+          </div>
+          <div class="card-body p-4 p-sm-5">
+            <div class="logo text-center mb-2">
+              <a href="#">
+                <img src="/imgs/logo.svg" alt="Logo Alugue Fácil" width="300">
+              </a>
             </div>
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Cadastro de usuário</h5>
+            <form action="cadastro-ok.php" method="POST">
+              <div class="form-floating mb-3">
+                <input placeholder="ID" type="text" name="id" size="30" maxlength="30" placeholder="ID" hidden>
+              </div>
+              <div class="form-floating mb-3">
+                <input placeholder="Nome" type="text" name="nome" maxlength="15" class="form-control" required>
+              </div>
+              <div class="form-floating mb-3">
+                <input placeholder="Seu melhor e-mail" type="email" name="email" maxlength="45" class="form-control" required>
+              </div>
+              <div class="form-floating mb-3">
+                <input placeholder="Senha de acesso" type="password" name="senha" maxlength="45" class="form-control" required>
+              </div>
+              <div class="d-grid mb-2 text-center">
+                <button class="btn btn-success btn-default" style="width: 100%;" type="submit">Cadastrar agora!</button>
+              </div>
+              <hr class="my-4">
+              <a href="../login.php" class="d-block text-center mt-2">Já tem usuário? Clique aqui</a>
+            </form>
           </div>
         </div>
       </div>
