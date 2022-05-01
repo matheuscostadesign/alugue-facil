@@ -41,7 +41,9 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+          <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+            <img class="img-fluid rounded-3 my-5" src="/assets/hero.png" alt="Alugue Fácil" />
+          </div>
         </div>
       </div>
     </header>
@@ -84,7 +86,9 @@
       <section class="py-5">
         <div class="container px-2 my-2">
           <div class="row gx-5 align-items-center">
-            <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+            <div class="col-lg-6">
+              <img class="img-fluid rounded mb-5 mb-lg-0" src="/assets/burocracia.png" alt="Sem burocracias" />
+            </div>
             <div class="col-lg-6">
               <h2 class="fw-bolder">Sem burocracias</h2>
               <p class="lead fw-normal text-muted mb-0">Chega de dor de cabeça na hora de encontrar um produto ou serviço para alugar.</p>
@@ -98,7 +102,9 @@
       <section class="py-5">
         <div class="container px-2 my-2">
           <div class="row gx-5 align-items-center">
-            <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+            <div class="col-lg-6 order-first order-lg-last">
+              <img class="img-fluid rounded mb-5 mb-lg-0" src="/assets/custos.png" alt="Sem custos" />
+            </div>
             <div class="col-lg-6">
               <h2 class="fw-bolder">Sem custos</h2>
               <p class="lead fw-normal text-muted mb-0">Faça seu cadastro e encontre ou divulgue seu produto ou serviço sem custo nenhum.</p>
