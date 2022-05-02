@@ -2,15 +2,22 @@
 <html lang="pt-br">
 
 <head>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Modern Business - Start Bootstrap Template</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <!-- Styles -->
+  <?php include 'componentes/head-styles.php'; ?>
+
+  <title>Alugue Fácil - Alugue qualquer coisa sem burocracias</title>
+  <meta name="title" content="Alugue Fácil - Alugue qualquer coisa sem burocracias">
+  <meta name="description" content="Alugue qualquer coisa, sem burocracias e diretamente com o proprietário">
+  <meta name="author" content="Matheus Costa" />
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="css/theme.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
+
 </head>
 
 <body class="d-flex flex-column h-100">
