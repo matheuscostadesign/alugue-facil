@@ -4,10 +4,10 @@ include('Conexao.php');
 if (isset($_POST['email']) || isset($_POST['senha'])) {
   if (strlen($_POST['email']) == 0) {
     //echo "Preencha seu e-mail";
-    echo "<div class='alert alert-danger' role='alert'>Preencha seu e-mail!</div> ";
+    echo "<div class='alert alert-danger text-center' role='alert'>Preencha seu e-mail!</div> ";
   } else if (strlen($_POST['senha']) == 0) {
     //echo "Preencha sua senha";
-    echo "<div class='alert alert-danger' role='alert'>Preencha sua senha!</div> ";
+    echo "<div class='alert alert-danger text-center' role='alert'>Preencha sua senha!</div> ";
   } else {
     $email = $conn->real_escape_string($_POST['email']);
     $senha = $conn->real_escape_string($_POST['senha']);
@@ -25,7 +25,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
       header("Location: painel.php");
     } else {
       //echo "Falha ao logar! E-mail ou senha incorretos";
-      echo "<div class='alert alert-danger' role='alert'>Falha ao logar! E-mail ou senha incorretos!</div> ";
+      echo "<div class='alert alert-danger text-center' role='alert'>E-mail ou senha incorretos!</div> ";
     }
   }
 }
