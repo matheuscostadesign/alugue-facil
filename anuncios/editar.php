@@ -9,44 +9,71 @@ $conx = mysqli_query($con, $consulta);
 $dado = mysqli_fetch_assoc($conx);
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="estilos.css">
+    <!-- Styles -->
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/head-styles.php'); ?>
+
+    <!-- Primary Meta Tags -->
+    <title>Editar Anúncios - Alugue Fácil</title>
+    <meta name="title" content="Editar Anúncios - Alugue Fácil">
+    <meta name="description" content="Alugue qualquer coisa, sem burocracias e diretamente com o proprietário">
 </head>
 
-<body>
-    <form name="condutores" action="editar-ok.php" method="post">
-        <table>
-            <tr>
-                <th colspan=2>Cadastro de Usuarios - Edição</th>
-            </tr>
-            <tr>
-                <td>ID</td>
-                <td><input type="text" name="id" size="15" maxlength="15" readonly value=<?php echo $codigo; ?>></td>
-            </tr>
-            <tr>
-                <td>Título</td>
-                <td><input type="text" name="titulo" size="30" maxlength="30" required value="<?php echo $dado['titulo']; ?>"></td>
-            </tr>
-            <tr>
-                <td>Descricao</td>
-                <td><input type="text" name="descricao" size="10" maxlength="10" required value=<?php echo $dado['descricao']; ?>></td>
-            </tr>
-            <tr>
-                <td>Preço</td>
-                <td><input type="text" name="preco" size="10" maxlength="10" required value=<?php echo $dado['preco']; ?>></td>
-            </tr>
-            <tr>
-                <td>Foto</td>
-                <td><input type="text" name="foto" size="10" maxlength="10" required value=<?php echo $dado['foto']; ?>></td>
-            </tr>
-            <tr>
-                <th><input type="submit" value="Gravar"></th>
-    </form>
-    <a href="../index.html">Voltar</a>
-    </table>
+<body class="bg-light">
+
+    <!-- Header -->
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/header.php'); ?>
+
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="rounded-3 py-5 px-4 px-md-5 mb-5">
+                <div class="text-center mb-4">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                    <h1 class="fw-bolder">Editar anúncio</h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <form action="editar-ok.php" method="post">
+                            <div class="form-floating mb-3">
+                                <label for="id">ID</label>
+                                <input class="form-control" name="id" maxlength="45" type="text" required readonly value=<?php echo $codigo; ?> />
+                            </div>
+                            <div class="form-floating mb-3">
+                                <label for="id">Foto</label>
+                                <input class="form-control" name="foto" maxlength="45" type="text" required value=<?php echo $dado['foto']; ?> />
+                            </div>
+                            <div class=" form-floating mb-3">
+                                <label for="titulo">Titulo</label>
+                                <input class="form-control" name="titulo" maxlength="45" type="text" required value="<?php echo $dado['titulo']; ?>" />
+                            </div>
+                            <div class="form-floating mb-3">
+                                <div class="col-lg-4 pl-0">
+                                    <label for="preco">Preço</label>
+                                    <input class="form-control" name="preco" maxlength="45" type="number" required value=<?php echo $dado['preco']; ?> />
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <label for="descricao">Descrição</label>
+                                <input class="form-control" name="descricao" type="text" style="height: 8rem" required value=<?php echo $dado['descricao']; ?> />
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-success btn-default btn-lg" type="submit" style="width: 100%;">Alterar Anúncio</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/footer.php'); ?>
+
+    <!-- Scripts -->
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/body-scripts.php'); ?>
 
 </body>
 

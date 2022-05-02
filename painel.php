@@ -34,23 +34,36 @@ $conx = mysqli_query($con, $consulta);
     </div>
   </section>
 
-  <!-- <section class="mt-5 mb-5">
-    <div class="container pt-5 pb-5 text-center">
-      <h2>Nenhum anúncio cadastrado...</h2><br>
-      <a href="#" class="btn btn-success btn-default">Novo anúncio</a>
+  <section class="py-5">
+    <div class="container px-5 my-5">
+      <div class="row gx-5">
+        <?php while ($dado = mysqli_fetch_assoc($conx)) { ?>
+          <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+              <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="Foto anúncio" width="600" height="350" style="object-fit: cover;" />
+              <?php echo $dado['foto']; ?>
+              <div class="card-body p-4">
+                <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">
+                  <//?php echo $dado['id']; ?>
+                </div> -->
+                <h5 class="card-title mb-3">
+                  <?php echo $dado['titulo']; ?>
+                </h5>
+                <p class="card-text mb-0">
+                  <?php echo $dado['descricao']; ?>
+                </p>
+                <h5 class="card-title mb-3 mt-3 green">
+                  <strong><span class="mr-1">R$</span><?php echo $dado['preco']; ?></strong>
+                </h5>
+                <a class="btn btn-primary" href="/anuncios/editar.php?codigo=<?php echo $dado['id']; ?>">Editar</a>
+                <a class="btn btn-danger" href="/anuncios/deletar.php?codigo=<?php echo $dado['id']; ?>" onclick="return confirm('Confirma exclusão?')">Excluir</a>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
+      </div>
     </div>
-  </section> -->
-
-
-  <?php while ($dado = mysqli_fetch_assoc($conx)) { ?>
-    <p><?php echo $dado['id']; ?></p>
-    <p><?php echo $dado['titulo']; ?></p>
-    <p><?php echo $dado['descricao']; ?></p>
-    <p><?php echo $dado['preco']; ?></p>
-    <p><?php echo $dado['foto']; ?></p>
-    <a href="editar.php?codigo=<?php echo $dado['id']; ?>">Editar</a>
-    <a href="deletar.php?codigo=<?php echo $dado['id']; ?>" onclick="return confirm('Confirma exclusão?')">Excluir</a>
-  <?php } ?>
+  </section>
 
   <!-- Footer -->
   <?php include 'componentes/footer.php'; ?>
