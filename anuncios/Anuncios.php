@@ -11,26 +11,26 @@ class Anuncios
 	public $con; // variável para conexão com BD
 
 	// Conexão BD - Local Host
-	// public function ConectaBD()
-	// {
-	// 	$host = "localhost";
-	// 	$usuario = "admin";
-	// 	$senha = "admin";
-	// 	$bd = "dbaluguefacil"; // nome do banco
-	// 	$this->con = mysqli_connect($host, $usuario, $senha, $bd);
-	// 	return $this->con;
-	// }
-
-	// Conexão BD - Infinity Free
 	public function ConectaBD()
 	{
-		$host = "sql301.epizy.com";
-		$usuario = "epiz_31596934";
-		$senha = "gkvsk25Kt4hoxSn";
-		$bd = "epiz_31596934_aluguefacil"; // nome do banco
+		$host = "localhost";
+		$usuario = "admin";
+		$senha = "admin";
+		$bd = "dbaluguefacil"; // nome do banco
 		$this->con = mysqli_connect($host, $usuario, $senha, $bd);
 		return $this->con;
 	}
+
+	// Conexão BD - Infinity Free
+	// public function ConectaBD()
+	// {
+	// 	$host = "sql301.epizy.com";
+	// 	$usuario = "epiz_31596934";
+	// 	$senha = "gkvsk25Kt4hoxSn";
+	// 	$bd = "epiz_31596934_aluguefacil"; // nome do banco
+	// 	$this->con = mysqli_connect($host, $usuario, $senha, $bd);
+	// 	return $this->con;
+	// }
 
 	// Método Inclusão
 	public function Incluir()

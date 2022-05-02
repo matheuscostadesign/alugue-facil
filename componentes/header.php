@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="/imgs/logo.svg" alt="Logo Alugue Fácil" data-toggle="modal" data-target="#modal">
@@ -14,7 +14,6 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <!-- <a href="cadastrar-usuario.html" class="btn btn-success btn-default">Novo Anúncio</a> -->
           Bem vindo, <?php echo $_SESSION['nome']; ?>.
           <a href="logout.php" class="btn-login">Sair</a>
         </form>

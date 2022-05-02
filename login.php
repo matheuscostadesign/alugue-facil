@@ -46,28 +46,11 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
 
 <body class="bg-green">
 
-  <!-- <h1>Acesse sua conta</h1>
-  <form action="" method="POST">
-    <p>
-      <label>E-mail</label>
-      <input type="text" name="email">
-    </p>
-    <p>
-      <label>Senha</label>
-      <input type="password" name="senha">
-    </p>
-    <p>
-      <button type="submit">Entrar</button>
-    </p>
-  </form>
-
-  <a href="usuarios/cadastrar.php">Cadastrar usuario</a> <br><br> -->
-
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
-          <div class="card-img-left d-none d-md-flex bg-green">
+          <div class="bg-image-login d-none d-md-flex">
           </div>
           <div class="card-body p-4 p-sm-5">
             <div class="logo text-center mb-2">

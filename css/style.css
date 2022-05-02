@@ -78,9 +78,21 @@ body::-webkit-scrollbar-thumb {
 
 /* ---- Login --- */
 
-.card-img-left {
+.bg-image-login {
   width: 45%;
-  background: scroll center url("https://source.unsplash.com/WEQbe2jBg40/414x512");
+  background: scroll center url("/assets/login.jpg");
+  background-size: cover;
+}
+
+.bg-image-cad {
+  width: 45%;
+  background: scroll center url("/assets/cadastro.jpg");
+  background-size: cover;
+}
+
+.bg-image-cad-ok {
+  width: 45%;
+  background: scroll center url("/assets/cadastro-ok.jpg");
   background-size: cover;
 }
 

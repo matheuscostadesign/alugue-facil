@@ -25,18 +25,19 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
       <div class="container px-5">
         <a class="navbar-brand" href="index.php">
-          <img src="imgs/logo.svg" alt="Logo Alugue Fácil" width="180">
+          <img src="imgs/logo.svg" alt="Logo Alugue Fácil" width="160">
         </a>
         <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link text-dark" href="/login.php">Login</a></li>
-            <li class="nav-item"><a class="nav-link text-dark" class="btn btn-primary" href="/usuarios/cadastrar.php">Cadastro</a></li>
+            <!-- <li class="nav-item"><a class="nav-link text-dark" class="btn btn-primary" href="/usuarios/cadastrar.php">Cadastro</a></li> -->
           </ul>
+          <a href="cadastrar-usuario.html" class="btn btn-success btn-default">Cadastrar-se</a>
         </div>
       </div>
     </nav>
-    <header class="bg-green py-5">
+    <header class="bg-green py-5 ">
       <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center">
           <div class="col-lg-8 col-xl-7 col-xxl-6">
