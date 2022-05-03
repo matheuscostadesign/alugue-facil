@@ -106,24 +106,32 @@
       </div>
       <div class="row gx-5 row-cols-2 row-cols-lg-4 py-2">
         <div class="col">
-          <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
-          <div class="h5 mb-2">Casas</div>
-          <p class="text-muted mb-0">Casas para alugar sem necessitar de fiador</p>
+          <div class="feature text-white rounded-3 mb-3">
+            <img src="/assets/casas.png" alt="Casas">
+          </div>
+          <div class="h5 mb-2 bolder">Casas</div>
+          <p class="text-muted mb-0 small">Casas para alugar sem necessitar de fiador</p>
         </div>
         <div class="col">
-          <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
+          <div class="feature text-white rounded-3 mb-3">
+            <img src="/assets/chacaras.png" alt="Chácaras">
+          </div>
           <div class="h5">Chácaras</div>
-          <p class="text-muted mb-0">Encontre um local para passar o final de semana</p>
+          <p class="text-muted mb-0 small">Encontre um local para passar o final de semana</p>
         </div>
         <div class="col">
-          <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
+          <div class="feature text-white rounded-3 mb-3">
+            <img src="/assets/carros.png" alt="Carros">
+          </div>
           <div class="h5">Carros</div>
-          <p class="text-muted mb-0">Alugue um carro sem ter que pagar caução.</p>
+          <p class="text-muted mb-0 small">Alugue um carro sem ter que pagar caução.</p>
         </div>
         <div class="col">
-          <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
+          <div class="feature text-white rounded-3 mb-3">
+            <img src="/assets/motos.png" alt="Motos">
+          </div>
           <div class="h5">Motos</div>
-          <p class="text-muted mb-0">Precisa de uma moto? Aqui também você encontra!</p>
+          <p class="text-muted mb-0 small">Precisa de uma moto? Aqui também você encontra!</p>
         </div>
       </div>
       <br>
@@ -138,7 +146,11 @@
             </div>
             <div class="col-lg-6">
               <h2 class="fw-bolder">Sem burocracias</h2>
-              <p class="lead fw-normal text-muted mb-0">Chega de dor de cabeça na hora de encontrar um produto ou serviço para alugar.</p>
+              <p class="lead fw-normal text-muted mb-0">Chega de dor de cabeça na hora de encontrar um produto ou serviço para alugar.
+              </p>
+              <p class="lead fw-normal text-muted mb-0 mt-4">
+                Encontre facilmente qualquer produto e negocie diretamente com o proprietário de forma fácil e rápida.
+              </p>
             </div>
           </div>
         </div>
@@ -155,6 +167,9 @@
             <div class="col-lg-6">
               <h2 class="fw-bolder">Sem custos</h2>
               <p class="lead fw-normal text-muted mb-0">Faça seu cadastro e encontre ou divulgue seu produto ou serviço sem custo nenhum.</p>
+              <p class="lead fw-normal text-muted mb-0 mt-4">
+                Nossa plataforma é totalmente gratuita e não contém nenhum tipo de anúncio.
+              </p>
             </div>
           </div>
         </div>
