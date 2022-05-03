@@ -29,8 +29,10 @@ $conx = mysqli_query($con, $consulta);
 
   <section class="s-hero">
     <div class="container">
-      <h1>Alugue qualquer coisa, sem burocracias e diretamente com o proprietário</h1>
-      <p>Aluguel de tudo, 24h por dia! 👏</p>
+      <div class="text">
+        <h1>Alugue qualquer coisa diretamente com o proprietário</h1>
+        <p>Aluguel de tudo, 24h por dia! 👏</p>
+      </div>
     </div>
   </section>
 
