@@ -26,11 +26,11 @@ $anuncios->Excluir();
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/componentes/header.php'); ?>
 
     <section class="py-5">
-        <div class="container px-5">
+        <div class="container">
             <div class="rounded-3 py-5 px-4 px-md-5 mb-5">
                 <div class="text-center mb-4">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
-                    <h1 class="fw-bolder green">Anúncio excluído <br>com sucesso!</h1>
+                    <h2 class="fw-bolder green">Anúncio excluído <br>com sucesso!</h2>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6">
