@@ -105,28 +105,28 @@
         </div>
       </div>
       <div class="row gx-5 row-cols-2 row-cols-lg-4 py-2">
-        <div class="col">
+        <div class="col text-center mb-4">
           <div class="feature text-white rounded-3 mb-3">
             <img src="/assets/casas.png" alt="Casas">
           </div>
           <div class="h5 mb-2 bolder">Casas</div>
           <p class="text-muted mb-0 small">Casas para alugar sem necessitar de fiador</p>
         </div>
-        <div class="col">
+        <div class="col text-center">
           <div class="feature text-white rounded-3 mb-3">
             <img src="/assets/chacaras.png" alt="Chácaras">
           </div>
           <div class="h5">Chácaras</div>
           <p class="text-muted mb-0 small">Encontre um local para passar o final de semana</p>
         </div>
-        <div class="col">
+        <div class="col text-center">
           <div class="feature text-white rounded-3 mb-3">
             <img src="/assets/carros.png" alt="Carros">
           </div>
           <div class="h5">Carros</div>
           <p class="text-muted mb-0 small">Alugue um carro sem ter que pagar caução.</p>
         </div>
-        <div class="col">
+        <div class="col text-center">
           <div class="feature text-white rounded-3 mb-3">
             <img src="/assets/motos.png" alt="Motos">
           </div>

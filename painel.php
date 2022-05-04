@@ -42,7 +42,7 @@ $conx = mysqli_query($con, $consulta);
         <?php while ($dado = mysqli_fetch_assoc($conx)) { ?>
           <div class="col-lg-4 mb-5">
             <div class="card h-100 shadow border-0">
-              <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="Foto anúncio" width="600" height="350" style="object-fit: cover;" />
+              <img class="card-img-top" src="/anuncios/fotos/padrao.png" alt="Foto anúncio" width="600" height="350" style="object-fit: cover;" />
               <!-- <//?php echo $dado['foto']; ?> -->
               <div class="card-body p-4">
                 <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">

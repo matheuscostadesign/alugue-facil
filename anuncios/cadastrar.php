@@ -32,8 +32,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/protect.php');
             <form action="cadastro-ok.php" method="post" enctype="multipart/form-data">
               <input placeholder="ID" type="text" name="id" size="30" maxlength="30" placeholder="ID" hidden>
               <div class="custom-file mb-3 text-center">
-                <img src="/anuncios/fotos/padrao.png" id="image-preview" style="width: 300px; height: 175px;">
-                <input type="file" name="foto" id="imagem" class="mt-3 mb-3" onchange="previewImagem()">
+                <img src="/anuncios/fotos/padrao.png" id="image-preview" style="width: 300px; height: 175px; object-fit: cover;">
+                <input type="file" name="foto" id="imagem" class="mt-3 mb-3" onchange="previewImagem()" required>
               </div>
               <div class="form-floating mb-3 mt-3">
                 <input class="form-control" name="titulo" maxlength="45" type="text" placeholder="Informe o título do anúncio" required />
