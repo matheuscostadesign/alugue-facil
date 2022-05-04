@@ -42,12 +42,9 @@ $conx = mysqli_query($con, $consulta);
         <?php while ($dado = mysqli_fetch_assoc($conx)) { ?>
           <div class="col-lg-4 mb-5">
             <div class="card h-100 shadow border-0">
-              <img class="card-img-top" src="/anuncios/fotos/padrao.png" alt="Foto anúncio" width="600" height="350" style="object-fit: cover;" />
-              <!-- <//?php echo $dado['foto']; ?> -->
+              <!-- <img class="card-img-top" src="/anuncios/fotos/padrao.png" alt="Foto anúncio" width="600" height="350" style="object-fit: cover;" /> -->
+              <img src='/anuncios/fotos/<?php echo $dado['foto']; ?>' height='600' width='350' alt="Foto anúncio" style="object-fit: cover;">
               <div class="card-body p-4">
-                <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">
-                  <//?php echo $dado['id']; ?>
-                </div> -->
                 <h5 class="card-title mb-3">
                   <?php echo $dado['titulo']; ?>
                 </h5>
