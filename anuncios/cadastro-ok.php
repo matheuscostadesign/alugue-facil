@@ -4,12 +4,42 @@ include("Anuncios.php");
 $imagem = $_FILES["foto"];
 $anuncios = new Anuncios;
 if ($imagem != NULL) {
-  $nomeFinal = time() . '.jpg';
-  if (move_uploaded_file($imagem['tmp_name'], $nomeFinal)) {
-    $tamanhoImg = filesize($nomeFinal);
-    $mysqlImg = addslashes(fread(fopen($nomeFinal, "r"), $tamanhoImg));
-    $anuncios->setFoto($mysqlImg);
-  }
+  // $nomeFinal = time() . '.jpg';
+  // if (move_uploaded_file($imagem['tmp_name'], $nomeFinal)) {
+  //   $tamanhoImg = filesize($nomeFinal);
+  //   $mysqlImg = addslashes(fread(fopen($nomeFinal, "r"), $tamanhoImg));
+  //   $anuncios->setFoto($mysqlImg);
+  // }
+  $nome_foto = 'padrao.jpg';
+  if (isset($_FILES['foto']) && $_FILES['foto']['size'] > 0) :
+
+    $extensoes_aceitas = array('bmp', 'png', 'svg', 'jpeg', 'jpg');
+    $extensao = strtolower(end(explode('.', $_FILES['foto']['name'])));
+
+    // Validamos se a extensão do arquivo é aceita
+    if (array_search($extensao, $extensoes_aceitas) === false) :
+      echo "<h1>Extensão Inválida!</h1>";
+      exit;
+    endif;
+
+    // Verifica se o upload foi enviado via POST   
+    if (is_uploaded_file($_FILES['foto']['tmp_name'])) :
+
+      // Verifica se o diretório de destino existe, senão existir cria o diretório  
+      if (!file_exists("fotos")) :
+        mkdir("fotos");
+      endif;
+
+      // Monta o caminho de destino com o nome do arquivo  
+      $nome_foto = date('dmY') . '_' . $_FILES['foto']['name'];
+
+      // Essa função move_uploaded_file() copia e verifica se o arquivo enviado foi copiado com sucesso para o destino  
+      if (!move_uploaded_file($_FILES['foto']['tmp_name'], 'fotos/' . $nome_foto)) :
+        echo "Houve um erro ao gravar arquivo na pasta de destino!";
+      endif;
+      $anuncios->setFoto($nome_foto);
+    endif;
+  endif;
 }
 $anuncios->setId($_REQUEST["id"]);
 $anuncios->setTitulo($_REQUEST["titulo"]);
@@ -49,7 +79,8 @@ $anuncios->Incluir();
             <input placeholder="ID" type="text" name="id" size="30" maxlength="30" placeholder="ID" hidden>
             <div class="form-floating mb-3">
               <p><strong>Foto: </strong>
-                <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($anuncios->getFoto()) . '" />' ?>
+                <!-- <//?php echo '<img src="data:image/jpeg;base64,' . base64_encode($anuncios->getFoto()) . '" />' ?> -->
+                <img src='/anuncios/fotos/<?= $anuncios->getFoto() ?>'>
               </p>
             </div>
             <div class="form-floating mb-3">
