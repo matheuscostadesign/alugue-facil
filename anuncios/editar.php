@@ -57,7 +57,8 @@ $dado = mysqli_fetch_assoc($conx);
                             </div>
                             <div class="form-floating mb-3">
                                 <label for="descricao">Descrição</label>
-                                <input class="form-control" name="descricao" type="text" style="height: 8rem" required value=<?php echo $dado['descricao']; ?> />
+                                <!-- <input class="form-control" name="descricao" type="text" style="height: 8rem" required value=<//?php echo $dado['descricao']; ?> /> -->
+                                <textarea class="form-control" name="descricao" type="text" cols="30" rows="4" placeholder="Descreva os detalhes do item e as opções de contato" value required><?php echo $dado['descricao']; ?></textarea>
                             </div>
                             <div class="d-grid">
                                 <button class="btn btn-success btn-default btn-lg" type="submit" style="width: 100%;">Alterar Anúncio</button>

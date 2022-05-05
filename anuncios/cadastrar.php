@@ -44,7 +44,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/protect.php');
                 </div>
               </div>
               <div class="form-floating mb-3">
-                <textarea class="form-control" name="descricao" type="text" placeholder="Descreva os detalhes do item e as opções de contato" style="height: 8rem" required></textarea>
+                <textarea class="form-control" name="descricao" type="text" cols="30" rows="4" placeholder="Descreva os detalhes do item e as opções de contato" required></textarea>
               </div>
               <div class="d-grid">
                 <button class="btn btn-success btn-default btn-lg" type="submit" style="width: 100%;">Cadastrar!</button>
