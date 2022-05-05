@@ -4,7 +4,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/anuncios/Anuncios.php');
 
 $anuncios = new Anuncios;
 $con = $anuncios->ConectaBD();
-$consulta = "select * from anuncios";
+$consulta = "SELECT * FROM `anuncios` order by id DESC";
 $conx = mysqli_query($con, $consulta);
 ?>
 
@@ -42,8 +42,9 @@ $conx = mysqli_query($con, $consulta);
         <?php while ($dado = mysqli_fetch_assoc($conx)) { ?>
           <div class="col-lg-4 mb-5">
             <div class="card h-100 shadow border-0">
-              <!-- <img class="card-img-top" src="/anuncios/fotos/padrao.png" alt="Foto anúncio" width="600" height="350" style="object-fit: cover;" /> -->
-              <img src='/anuncios/fotos/<?php echo $dado['foto']; ?>' height='600' width='350' alt="Foto anúncio" style="object-fit: cover;">
+              <div class="img-anuncio text-center">
+                <img src='/anuncios/fotos/<?php echo $dado['foto']; ?>' alt="Foto anúncio" style="width: 300px; height: 175px; object-fit: contain;">
+              </div>
               <div class="card-body p-4">
                 <h5 class="card-title mb-3">
                   <?php echo $dado['titulo']; ?>

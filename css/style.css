@@ -147,6 +147,11 @@ nav ul li {
   margin-top: 32px;
 }
 
+iframe {
+  width: 100%;
+  height: 620px;
+}
+
 /* Section Anuncios */
 
 .s-anuncios {

@@ -3,6 +3,10 @@
     padding: 1.5rem 0;
   }
 
+  iframe {
+    height: 320px;
+  }
+
   .s-hero h1 {
     font-size: 2rem;
     line-height: 2.5rem;

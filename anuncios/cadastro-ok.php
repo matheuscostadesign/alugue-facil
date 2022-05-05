@@ -13,12 +13,12 @@ if ($imagem != NULL) {
   $nome_foto = 'padrao.jpg';
   if (isset($_FILES['foto']) && $_FILES['foto']['size'] > 0) :
 
-    $extensoes_aceitas = array('bmp', 'png', 'svg', 'jpeg', 'jpg');
+    $extensoes_aceitas = array('bmp', 'png', 'svg', 'webp', 'jpeg', 'jpg');
     $extensao = strtolower(end(explode('.', $_FILES['foto']['name'])));
 
     // Validamos se a extensão do arquivo é aceita
     if (array_search($extensao, $extensoes_aceitas) === false) :
-      echo "<h1>Extensão Inválida!</h1>";
+      echo "<div class='alert alert-danger text-center' role='alert'>Extensão inválida!</div>";
       exit;
     endif;
 
@@ -78,10 +78,9 @@ $anuncios->Incluir();
           <div class="col-lg-8 col-xl-6">
             <input placeholder="ID" type="text" name="id" size="30" maxlength="30" placeholder="ID" hidden>
             <div class="form-floating mb-3">
-              <p><strong>Foto: </strong>
-                <!-- <//?php echo '<img src="data:image/jpeg;base64,' . base64_encode($anuncios->getFoto()) . '" />' ?> -->
-                <img src='/anuncios/fotos/<?= $anuncios->getFoto() ?>'>
-              </p>
+              <div class="text-center">
+                <img src='/anuncios/fotos/<?= $anuncios->getFoto() ?>' style="width: 300px; height: 175px; object-fit: contain;">
+              </div>
             </div>
             <div class="form-floating mb-3">
               <p><strong>Título: </strong> <?php echo ($anuncios->getTitulo()) ?></p>

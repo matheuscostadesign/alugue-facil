@@ -41,9 +41,9 @@ $dado = mysqli_fetch_assoc($conx);
                                 <label for="id">ID</label>
                                 <input class="form-control" name="id" maxlength="45" type="text" required readonly value=<?php echo $codigo; ?> />
                             </div>
-                            <div class="form-floating mb-3">
+                            <div class="form-floating mb-3 d-none">
                                 <label for="id">Foto</label>
-                                <input class="form-control" name="foto" maxlength="45" type="text" required value=<?php echo $dado['foto']; ?> />
+                                <input class="form-control" name="foto" maxlength="45" type="text" hidden required value=<?php echo $dado['foto']; ?> />
                             </div>
                             <div class=" form-floating mb-3">
                                 <label for="titulo">Titulo</label>

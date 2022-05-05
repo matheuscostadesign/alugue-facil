@@ -56,10 +56,12 @@
       </div>
     </header>
 
-    <div class="container text-center mt-5 mb-5">
-      <h1>Entre em contato conosco</h1><br>
-      <h3>matheuscostadosantos@hotmail.com</h3><br>
-      <h3>(17) 99214-3072</h3>
+    <div class="container mt-5 mb-5">
+      <h1 class="fw-bolder">Contato</h1><br>
+      <p>Este projeto foi desenvolvido como conclusão do curso de desenvolvimento web do Senai</p>
+      <p>Gostou da ideia? Entre em contato comigo:</p>
+      <a href="mailto:matheuscostadosantos@hotmail.com">matheuscostadosantos@hotmail.com</a><br>
+      <a href="tel:+5517992143072">(17) 99214-3072</a>
     </div>
   </main>
 

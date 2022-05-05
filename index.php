@@ -1,3 +1,12 @@
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . '/anuncios/Anuncios.php');
+
+$anuncios = new Anuncios;
+$con = $anuncios->ConectaBD();
+$consulta = "SELECT * FROM `anuncios` order by id DESC LIMIT 3";
+$conx = mysqli_query($con, $consulta);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -46,6 +55,8 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/theme.css" />
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/responsive.css">
 
@@ -53,10 +64,6 @@
   <meta name="title" content="Alugue Fácil - Alugue qualquer coisa sem burocracias">
   <meta name="description" content="Alugue qualquer coisa, sem burocracias e diretamente com o proprietário">
   <meta name="author" content="Matheus Costa" />
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="css/theme.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
 
 </head>
 
@@ -110,31 +117,75 @@
             <img src="/assets/casas.png" alt="Casas">
           </div>
           <div class="h5 mb-2 bolder">Casas</div>
-          <p class="text-muted mb-0 small">Casas para alugar sem necessitar de fiador</p>
+          <!-- <p class="text-muted mb-0 small">Casas para alugar sem necessitar de fiador</p> -->
         </div>
         <div class="col text-center">
           <div class="feature text-white rounded-3 mb-3">
             <img src="/assets/chacaras.png" alt="Chácaras">
           </div>
           <div class="h5">Chácaras</div>
-          <p class="text-muted mb-0 small">Encontre um local para passar o final de semana</p>
+          <!-- <p class="text-muted mb-0 small">Encontre um local para passar o final de semana</p> -->
         </div>
         <div class="col text-center">
           <div class="feature text-white rounded-3 mb-3">
             <img src="/assets/carros.png" alt="Carros">
           </div>
           <div class="h5">Carros</div>
-          <p class="text-muted mb-0 small">Alugue um carro sem ter que pagar caução.</p>
+          <!-- <p class="text-muted mb-0 small">Alugue um carro sem ter que pagar caução.</p> -->
         </div>
         <div class="col text-center">
           <div class="feature text-white rounded-3 mb-3">
             <img src="/assets/motos.png" alt="Motos">
           </div>
           <div class="h5">Motos</div>
-          <p class="text-muted mb-0 small">Precisa de uma moto? Aqui também você encontra!</p>
+          <!-- <p class="text-muted mb-0 small">Precisa de uma moto? Aqui também você encontra!</p> -->
         </div>
       </div>
+
+      <div class="row justify-content-center mb-5 mt-5">
+        <div class="col-lg-8 col-xxl-6 col-sm-12">
+          <div class="text-center">
+            <h1 class="fw-bolder ">Últimos itens anúnciados</h1>
+            <p class="lead fw-normal text-muted mb-2">Confira os itens recentes adicionados na plataforma</p>
+          </div>
+        </div>
+      </div>
+      <div class="row gx-5">
+        <?php while ($dado = mysqli_fetch_assoc($conx)) { ?>
+          <div class="col-lg-4 mb-5">
+            <div class="card h-100 shadow border-0">
+              <div class="img-anuncio text-center">
+                <img src='/anuncios/fotos/<?php echo $dado['foto']; ?>' alt="Foto anúncio" style="width: 300px; height: 175px; object-fit: contain;">
+              </div>
+              <div class="card-body p-4">
+                <h5 class="card-title mb-3 text-center">
+                  <?php echo $dado['titulo']; ?>
+                </h5>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
+      </div>
+
+      <aside class="bg-green bg-gradient rounded-3 p-4 p-sm-5">
+        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+          <div class="mb-4 mb-xl-0">
+            <div class="fs-3 fw-bold text-white">Cadastre-se agora mesmo!</div>
+            <div class="text-white-50">Encontre ou divulgue seus produtos e serviços</div>
+          </div>
+          <div class="ms-xl-4">
+            <div class="input-group mb-2">
+              <a class="btn btn-outline-light btn-lg px-4" href="/usuarios/cadastrar.php">Cadastrar!</a>
+            </div>
+          </div>
+        </div>
+      </aside>
       <br>
+
+      <div class="mt-3 text-center">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/YyMormDc3xY"></iframe>
+      </div>
+
     </div>
 
     <div class="container px-5">
@@ -157,6 +208,7 @@
       </section>
     </div>
 
+
     <div class="container px-5">
       <section class="py-5">
         <div class="container px-2 my-2">
@@ -176,21 +228,7 @@
       </section>
     </div>
 
-    <div class="container px-5 my-5">
-      <aside class="bg-green bg-gradient rounded-3 p-4 p-sm-5 mt-5">
-        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-          <div class="mb-4 mb-xl-0">
-            <div class="fs-3 fw-bold text-white">Cadastre-se agora mesmo!</div>
-            <div class="text-white-50">Encontre ou divulgue seus produtos e serviços</div>
-          </div>
-          <div class="ms-xl-4">
-            <div class="input-group mb-2">
-              <a class="btn btn-outline-light btn-lg px-4" href="/usuarios/cadastrar.php">Cadastrar!</a>
-            </div>
-          </div>
-        </div>
-      </aside>
-    </div>
+
 
   </main>
 
@@ -199,6 +237,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/scripts.js"></script>
+
 </body>
 
 </html>
