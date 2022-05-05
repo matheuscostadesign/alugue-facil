@@ -17,7 +17,7 @@
       </div>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <form class="form-inline my-2 my-lg-0">
-          Bem vindo, <?php echo $_SESSION['nome']; ?>.
+          Bem vindo, <?php echo $_SESSION['nome']; ?>
           <a href="/logout.php" class="btn-login">Sair</a>
         </form>
       </ul>
