@@ -15,7 +15,7 @@ Tecnologias e ferramentas utilizadas no projeto:
 - Figma, HTML, CSS, Javascript, PHP, MySQL, Git, GitHub.
 
 Confira o resultado final acessando:
-http://aluguefacil.infinityfreeapp.com/
+- http://aluguefacil.infinityfreeapp.com/
 
 Repositório com projetos realizados durante o curso:
-https://github.com/matheuscostadesign/projetos-senai
+- https://github.com/matheuscostadesign/projetos-senai
