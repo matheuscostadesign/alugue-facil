@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/matheuscostadesign/projetos-senai/main/.github/logo-senai.svg" width="160">
 
 # Alugue Fácil
-- Alugue Fácil é uma plataforma online onde os usuários podem encontrar e divulgar qualquer tipo de produto ou serviço para alugar.
+Alugue Fácil é uma plataforma online onde os usuários podem encontrar e divulgar qualquer tipo de produto ou serviço para alugar.
 
 O projeto é o resultado final do curso de desenvolvimento web do Senai que foi planejado desde sua concepção, onde foi feito:
 - Briefing; 
