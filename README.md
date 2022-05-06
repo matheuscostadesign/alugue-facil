@@ -1,9 +1,7 @@
 # Alugue Fácil
 Alugue Fácil é uma plataforma online onde os usuários podem encontrar e divulgar qualquer tipo de produto ou serviço para alugar.
 
-O site é o resultado final do curso de desenvolvimento web do Senai.
-
-O projeto foi totalmente planejado desde sua concepção, onde foi feito:
+O projeto é o resultado final do curso de desenvolvimento web do Senai que foi planejado desde sua concepção, onde foi feito:
 - Briefing; 
 - Wireframes e layout inicial;
 - Identidade visual (logo, tipografia, cores, etc); 
