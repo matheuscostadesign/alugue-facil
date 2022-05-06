@@ -1,5 +1,16 @@
+<img src="https://raw.githubusercontent.com/matheuscostadesign/projetos-senai/main/.github/logo-senai.svg" width="160">
+
 # Alugue Fácil
-Alugue Fácil é uma plataforma online onde os usuários podem encontrar e divulgar qualquer tipo de produto ou serviço para alugar.
+
+- Alugue Fácil é uma plataforma online onde os usuários podem encontrar e divulgar qualquer tipo de produto ou serviço para alugar.
+
+- Repositório para atividades e projetos do curso de desenvolvimento web
+
+- Escola Senai "Antonio Devisate" de São José do Rio Preto/SP
+
+- Aluno: Matheus Costa dos Santos
+
+<a href="https://inscricao-tecnico.sp.senai.br/"><img src=".github/curso.png" alt="Curso Desenvolvimento Web Senai" width="700"></a>
 
 O projeto é o resultado final do curso de desenvolvimento web do Senai que foi planejado desde sua concepção, onde foi feito:
 - Briefing; 
