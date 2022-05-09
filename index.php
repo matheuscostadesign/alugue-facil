@@ -16,19 +16,24 @@ $conx = mysqli_query($con, $consulta);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Alugue Fácil - Alugue qualquer coisa sem burocracias</title>
+  <meta name="title" content="Alugue Fácil - Alugue qualquer coisa sem burocracias">
+  <meta name="description" content="Alugue qualquer coisa, sem burocracias e diretamente com o proprietário">
+  <meta name="author" content="Matheus Costa" />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://metatags.io/">
+  <meta property="og:url" content="http://aluguefacil.infinityfreeapp.com">
   <meta property="og:title" content="Alugue Fácil - Alugue qualquer coisa sem burocracias">
   <meta property="og:description" content="Alugue qualquer coisa diretamente com o proprietário">
-  <meta property="og:image" content="https://projetos-senai.netlify.app/uc08/projeto-integrador/alugue-facil/imgs/og-image.png">
+  <meta property="og:image" content="http://aluguefacil.infinityfreeapp.com/imgs/og-image.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://metatags.io/">
+  <meta property="twitter:url" content="http://aluguefacil.infinityfreeapp.com">
   <meta property="twitter:title" content="Alugue Fácil - Alugue qualquer coisa sem burocracias">
   <meta property="twitter:description" content="Alugue qualquer coisa diretamente com o proprietário">
-  <meta property="twitter:image" content="https://projetos-senai.netlify.app/uc08/projeto-integrador/alugue-facil/imgs/og-image.png">
+  <meta property="twitter:image" content="http://aluguefacil.infinityfreeapp.com/imgs/og-image.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,10 +65,7 @@ $conx = mysqli_query($con, $consulta);
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/responsive.css">
 
-  <title>Alugue Fácil - Alugue qualquer coisa sem burocracias</title>
-  <meta name="title" content="Alugue Fácil - Alugue qualquer coisa sem burocracias">
-  <meta name="description" content="Alugue qualquer coisa, sem burocracias e diretamente com o proprietário">
-  <meta name="author" content="Matheus Costa" />
+
 
 </head>
 
